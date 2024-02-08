@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">JOJII</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#"  class="active" style="--navAni:1">Home</a></li>
+                <li><a href="Sobre.html" style="--navAni:2">Sobre</a></li>
+                <li><a href="foto.html" style="--navAni:3">Fotos</a></li>
+                <li><a href="apoio.html" style="--navAni:4">Apoio</a></li>
+                <li><a href="#" style="--navAni:5"></a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Olá, sou eu</h3>
+                <h1>Eu sou<span style="color:#f9532d;"> Julio</span></h1>
+                <p>Sou um fotógrafo e desenvolvedor web , dedicado a capturar momentos memoráveis e criar experiências digitais excepcionais. Com um olhar afiado para a composição e uma paixão pela tecnologia, minha jornada profissional abrange dois mundos fascinantes.
+
+                    Como fotógrafo, busco eternizar momentos especiais com meu trabalho de lente. Minha abordagem artística e habilidades técnicas me permitem criar imagens cativantes que contam histórias e evocam emoções. Através das minhas lentes, transformo momentos efêmeros em lembranças duradouras.
+                    <br>
+                    <br>
+                    Como desenvolvedor web, estou comprometido em transformar ideias criativas em realidade digital. Utilizo meu conhecimento em programação e design para construir sites e aplicações web de alta qualidade. Minha missão é proporcionar soluções web que não apenas se destacam em termos de funcionalidade, mas também oferecem uma experiência de usuário excepcional.
+                    <br>
+                    <br>
+                    Combinando minha paixão pela fotografia e meu domínio do desenvolvimento web, estou constantemente em busca de maneiras de inovar e criar projetos que deixem uma impressão duradoura. Se você procura serviços de fotografia ou desenvolvimento web de alta qualidade, estou aqui para atender às suas necessidades e superar suas expectativas."
+                </p>
+                <div class="social">
+                    <a href="#" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/sky.j0ji/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/jojigoats?tab=repositories" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    <a href="#" style="--socialAni:4"><i class='bx bxl-facebook-circle'></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="Juliofoto.jpg" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
